@@ -1,9 +1,8 @@
 @extends('layout.master')
 
 @section('content')
-    <h4>Merci de repondre a toutes les questions et de valider le formulaire en bas de page</h4>
-        
-        <form method="post" action="/validate_message" class="col-md-4">
+<h3>Merci de repondre a toutes les questions et de valider le formulaire en bas de page</h3>
+        <form method="post" action="/validate_message" class="col-md-4 mx-auto">
             {{ csrf_field() }}
                 <div class="form-group">
                    <h3>Question 1/20 </h3> 
@@ -27,15 +26,15 @@
                <h3>Question 3/20 </h3>
                <label for="genre">Entrez votre sexe</label>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" name="genre" value="MA" class="custom-control-input" checked>
+                    <input type="radio" name="genre" value="1" class="custom-control-input" checked>
                     <label>Homme</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" name="genre" value="FE" class="custom-control-input">
+                    <input type="radio" name="genre" value="2" class="custom-control-input">
                     <label>Femme</label>
                   </div>
                   <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" name="genre" value="NG" class="custom-control-input">
+                    <input type="radio" name="genre" value="3" class="custom-control-input">
                     <label>Prefere ne pas repondre</label>
                   </div>
                   @if ($errors->has('genre'))

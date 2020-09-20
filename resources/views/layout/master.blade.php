@@ -10,10 +10,8 @@
 <body>
 
 <div class="container">
-  <div class="row">
-    <div class="justify-content-center">
+  <div class="row justify-content-centerr">
         @yield('content')
-    </div>
   </div>  
 </div>
 
