@@ -38,7 +38,7 @@
                       <label class="form-check-label">Prefere ne pas répondre</label>
                   </div>
                 </div>
-               <button class="btn btn-primary mt-4" type="submit">Valider</button>
+               <button class="btn btn-primary mb-4 mt-4" type="submit">Valider</button>
          </form>
 
 @endsection

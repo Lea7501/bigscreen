@@ -17,7 +17,7 @@ class CreateResponsesTable extends Migration
             $table->increments('id');
             $table->string('email', 255)->unique();
             $table->integer('age')->unsigned();
-            $table->enum('genre', ['Homme', 'Femme', 'Préfère ne pas répondre']);
+            $table->integer('genre')->unsigned();
             $table->timestamps();
         });
     }

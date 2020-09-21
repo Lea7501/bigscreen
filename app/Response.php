@@ -21,4 +21,6 @@ class Response extends Model
     protected $fillable = ['email', 'age', 'genre'];
 
 
+
+    
 }

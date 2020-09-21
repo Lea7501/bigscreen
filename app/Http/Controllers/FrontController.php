@@ -49,6 +49,14 @@ class FrontController extends Controller{
     // Retourne la vue de la reponse faite par l'utilisateur
     public function show($link){
         
+        // Tableau des valeurs
+        $genre = Response::select('genre', 
+        array(
+            'Homme' => 1,
+            'Femme' => 2, 
+            'Prefere ne pas repondre' => 3,
+            ));
+
         // Requete utilisant le query builder, jointure de deux tables avec clause sql sur une
         // propriété dynamique 
         $data = DB::table('responses')              
@@ -56,10 +64,11 @@ class FrontController extends Controller{
                 ->join('users', 'users.id', '=', 'responses.id')
                 ->where('link', $link)
                 ->first();
-      
+        
         return view('front.show', [
             'response' => $data,
-        ]);    
+            'genre' =>  $genre,
+        ]);
 
     }
 

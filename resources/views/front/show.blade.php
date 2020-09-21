@@ -2,24 +2,28 @@
 
 @section('content')
    
-    <h1>Ma reponse</h1>
     
-    <br><br>
-   
-    <h4>Question 1/20</h4> 
-    <p>Entrez votre mail</p>
-    <p>{{ $response->email }}<p>
-    <br>
+ <div class='pb-5 pt-3 mx-auto'>
+  <h1 class='text-center mx-auto'>Ma reponse</h1>
+    <div class='pb-2 pt-2'>
+        <h5>Question 1/20</h5> 
+        <p>Entrez votre mail :</p>
+        <p>{{ $response->email }}<p>
+    </div>
 
-    <h4>Question 2/20</h4> 
-    <p>Entrez votre mail</p>
-    <p>{{ $response->age }}<p>
-    <br>
+    <div class='pb-2 pt-2'>
+        <h5>Question 2/20</h5> 
+        <p>Entrez votre age :</p>
+        <p>{{ $response->age }}<p>
+    </div>
 
-    <h4>Question 3/20</h4> 
-    <p>Entrez votre mail</p>
-    <p>{{ $response->genre }}<p>
-    <br>
-
+    <div class='pb-2 pt-2 '>
+        <h5>Question 3/20</h5> 
+        <p>Entrez votre genre :</p>
+       
+        <p>{{ $response->genre }}<p>
+        
+    </div>
+</div>
 
 @endsection
