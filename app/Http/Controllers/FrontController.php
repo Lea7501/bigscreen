@@ -17,7 +17,6 @@ class FrontController extends Controller{
 
     }
 
-
     // Insertion des données (reponses au questionnaire par 
     // l'utilisateur) dans la BDD
     public function traitement(){
@@ -46,17 +45,7 @@ class FrontController extends Controller{
 
     // Retourne la vue de la reponse faite par l'utilisateur
     public function show($link){
-        
-       // Tableau des valeurs
-       /* $genre = Response::select('genre', 
-        array(
-            'Homme' => 0,
-            'Femme' => 1, 
-            'Préfère ne pas repondre' => 2,
-            ));
-        */
-  
-
+    
         // Requete utilisant le query builder, jointure de deux tables avec clause sql sur une
         // propriété dynamique 
         $data = DB::table('responses')              
@@ -70,6 +59,5 @@ class FrontController extends Controller{
         ]);
 
     }
-
 
 }

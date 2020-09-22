@@ -1,6 +1,8 @@
 @extends('layout.master')
 
 @section('content')
+
+
 <div class='pb-5 pt-3 text-center mx-auto'>
   <h2>Bonjour !</h2>
   <h4>Merci de repondre a toutes les questions et de valider le formulaire en bas de page</h4>
