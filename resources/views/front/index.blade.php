@@ -24,7 +24,7 @@
 
               <div class="form-group pt-4">
                <h4>Question 3/20 </h4>
-               <label for="genre">Entrez votre sexe</label>
+               <label for="genre">Entrez votre genre</label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="genre" value="0" checked>
                       <label class="form-check-label">Homme</label>

@@ -14,6 +14,7 @@ class FrontController extends Controller{
     // Vue du questionnaire en page d'accueil
     public function questionnaire(){
         return view('front.index');
+
     }
 
 
@@ -34,28 +35,27 @@ class FrontController extends Controller{
         ]);
         
         $user = \App\User::create([
-         'link' => Str::random(15),
-        ]);
-       
+            'link' => Str::random(15),
+            ]);
         $user->save();
         
-        $link = 'users.link';
+        $link = 'users.link'; 
         return view('front.validate_message', ['user' => $user]);
 
     }
 
-
-
     // Retourne la vue de la reponse faite par l'utilisateur
     public function show($link){
         
-        // Tableau des valeurs
-        $genre = Response::select('genre', 
+       // Tableau des valeurs
+       /* $genre = Response::select('genre', 
         array(
-            'Homme' => 1,
-            'Femme' => 2, 
-            'Prefere ne pas repondre' => 3,
+            'Homme' => 0,
+            'Femme' => 1, 
+            'Préfère ne pas repondre' => 2,
             ));
+        */
+  
 
         // Requete utilisant le query builder, jointure de deux tables avec clause sql sur une
         // propriété dynamique 
@@ -64,10 +64,9 @@ class FrontController extends Controller{
                 ->join('users', 'users.id', '=', 'responses.id')
                 ->where('link', $link)
                 ->first();
-        
+
         return view('front.show', [
             'response' => $data,
-            'genre' =>  $genre,
         ]);
 
     }

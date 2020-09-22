@@ -20,9 +20,7 @@
     <div class='pb-2 pt-2 '>
         <h5>Question 3/20</h5> 
         <p>Entrez votre genre :</p>
-       
         <p>{{ $response->genre }}<p>
-        
     </div>
 </div>
 
