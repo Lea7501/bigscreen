@@ -17,7 +17,14 @@ class CreateResponsesTable extends Migration
             $table->increments('id');
             $table->string('email', 255)->unique();
             $table->integer('age')->unsigned();
-            $table->integer('genre')->unsigned();
+            $table->string('genre');
+            $table->integer('foyer')->unsigned();
+            $table->string('profession', 255);
+            $table->string('casque_actuel');
+            $table->string('magasin_application');
+            $table->string('casque_futur');
+            $table->integer('utilisation_foyer')->unsigned();
+            $table->string('utilisation_bigscreen');
             $table->timestamps();
         });
     }

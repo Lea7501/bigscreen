@@ -14,7 +14,6 @@ class FrontController extends Controller{
     // Vue du questionnaire en page d'accueil
     public function questionnaire(){
         return view('front.index');
-
     }
 
     // Insertion des données (reponses au questionnaire par 
@@ -24,14 +23,31 @@ class FrontController extends Controller{
         request()->validate([
             'email' => ['required', 'email', 'unique:responses,email'],
             'age' => ['required'],
+            'genre' => ['required'],
+            'foyer' => ['required'],
+            'profession' => ['required'],
+            /*'casque_actuel' => ['required'],
+            'magasin_application' => ['required'],
+            'casque_futur' => ['required'],
+            'utilisation_foyer' => ['required'],
+            'utilisation_bigscreen' => ['required'],*/
         ]);
 
         // Permet de stocker les informations dans la BDD - la requête create correspond a un new + save
         $response = \App\Response::create([
             'email' => request('email'),
             'age' => request('age'),
-            'genre' => request('genre')
+            'genre' => request('genre'),
+            'foyer' => request('foyer'),
+            'profession' => request('profession'),
+            'casque_actuel' => request('casque_actuel'),
+            'magasin_application' => request('magasin_application'),
+            'casque_futur' => request('casque_futur'),
+            'utilisation_foyer' => request('utilisation_foyer'),
+            'utilisation_bigscreen' => request('utilisation_bigscreen'),
         ]);
+
+        $response->save();
         
         $user = \App\User::create([
             'link' => Str::random(15),
