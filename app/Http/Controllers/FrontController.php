@@ -23,14 +23,24 @@ class FrontController extends Controller{
         request()->validate([
             'email' => ['required', 'email', 'unique:responses,email'],
             'age' => ['required'],
-            'genre' => ['required'],
+            /*'genre' => ['required'],*/
             'foyer' => ['required'],
             'profession' => ['required'],
             /*'casque_actuel' => ['required'],
             'magasin_application' => ['required'],
-            'casque_futur' => ['required'],
+            'casque_futur' => ['required'],*/
             'utilisation_foyer' => ['required'],
-            'utilisation_bigscreen' => ['required'],*/
+            /*'utilisation_bigscreen' => ['required'],
+            'point_image' => ['required'],
+            'point_confort' => ['required'],
+            'point_connection' => ['required'],
+            'point_graphisme' => ['required'],
+            'point_audio' => ['required'],
+            'notification' => ['required'],
+            'invitation_ami' => ['required'],
+            'enregistrer_emission' => ['required'],
+            'jeux_exclusifs' => ['required'],*/
+            'fonctionnalité_personnelle' => ['required'],
         ]);
 
         // Permet de stocker les informations dans la BDD - la requête create correspond a un new + save
@@ -45,6 +55,16 @@ class FrontController extends Controller{
             'casque_futur' => request('casque_futur'),
             'utilisation_foyer' => request('utilisation_foyer'),
             'utilisation_bigscreen' => request('utilisation_bigscreen'),
+            'point_image' => request('point_image'),
+            'point_confort' => request('point_confort'),
+            'point_connection' => request('point_connection'),
+            'point_graphisme' => request('point_graphisme'),
+            'point_audio' => request('point_audio'),
+            'notification' => request('notification'),
+            'invitation_ami' => request('invitation_ami'),
+            'enregistrer_emission' => request('enregistrer_emission'),
+            'jeux_exclusifs' => request('jeux_exclusifs'),
+            'fonctionnalité_personnelle' => request('fonctionnalité_personnelle'),
         ]);
 
         $response->save();

@@ -25,6 +25,16 @@ class CreateResponsesTable extends Migration
             $table->string('casque_futur');
             $table->integer('utilisation_foyer')->unsigned();
             $table->string('utilisation_bigscreen');
+            $table->integer('point_image')->unsigned();
+            $table->integer('point_confort')->unsigned();
+            $table->integer('point_connection')->unsigned();
+            $table->integer('point_graphisme')->unsigned();
+            $table->integer('point_audio')->unsigned();
+            $table->string('notification');
+            $table->string('invitation_ami');
+            $table->string('enregistrer_emission');
+            $table->string('jeux_exclusifs');
+            $table->mediumText('fonctionnalité_personnelle');
             $table->timestamps();
         });
     }

@@ -18,7 +18,7 @@ class Response extends Model
 
     // Liste les colonnes autorisés pour éviter les erreurs de 
     // MassAssignmentException
-    protected $fillable = ['email', 'age', 'genre', 'foyer', 'profession', 'casque_actuel', 'magasin_application', 'casque_futur', 'utilisation_foyer', 'utilisation_bigscreen'];
+    protected $fillable = ['email', 'age', 'genre', 'foyer', 'profession', 'casque_actuel', 'magasin_application', 'casque_futur', 'utilisation_foyer', 'utilisation_bigscreen', 'point_image', 'point_confort', 'point_connection', 'point_graphisme', 'point_audio', 'notification', 'invitation_ami', 'enregistrer_emission', 'jeux_exclusifs', 'fonctionnalité_personnelle'];
 
 
 
