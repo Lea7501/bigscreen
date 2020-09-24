@@ -14,7 +14,7 @@
                    <label for="email">Entrez votre mail</label>
                    <input type="email" class="form-control" name="email" placeholder="lea@bigscreen.com" value="{{ old('email') }}" />
                     @if ($errors->has('email'))
-                      <p class="invalid-feedback">{{ $errors->first('email') }}</p>
+                      <p class="text-danger">{{ $errors->first('email') }}</p>
                     @endif
                 </div>
 
@@ -28,15 +28,15 @@
                <h4>Question 3/20 </h4>
                <label for="genre">Entrez votre genre</label>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="genre" value="Homme" class="sev_check">
+                    <input class="form-check-input" type="radio" name="genre" value="Homme" checked>
                       <label class="form-check-label">Homme</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="genre" value="Femme" class="sev_check">
+                    <input class="form-check-input" type="radio" name="genre" value="Femme">
                       <label class="form-check-label">Femme</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="genre" value="no gender" class="sev_check">
+                    <input class="form-check-input" type="radio" name="genre" value="no gender">
                       <label class="form-check-label">Prefere ne pas répondre</label>
                   </div>
                 </div>
@@ -56,7 +56,7 @@
                 <div class="form-group pt-4">
                    <h4>Question 6/20 </h4>
                    <label for="casque_actuel">Quel marque de casque VR utilisez vous ?</label>
-                   <select class="form-control" name="casque_actuel">
+                   <select class="form-control" name="casque_actuel" value="{{ old('casque_actuel') }}">
                     <option selected>Occulus Rift/s</option>
                     <option>HTC Vive</option>
                     <option>Windows Mixed Reality</option>
@@ -67,7 +67,7 @@
                 <div class="form-group pt-4">
                    <h4>Question 7/20 </h4>
                    <label for="magasin_application">Sur quel magasin d’application achetez vous des contenus VR ?</label>
-                   <select class="form-control" name="magasin_application">
+                   <select class="form-control" name="magasin_application" value="{{ old('magasin_application') }}">
                     <option selected>SteamVR</option>
                     <option>Occulus store</option>
                     <option>Viveport</option>
@@ -80,7 +80,7 @@
                 <div class="form-group pt-4">
                    <h4>Question 8/20 </h4>
                    <label for="casque_futur">Quel casque envisagez vous d’acheter dans un futur proche ?</label>
-                   <select class="form-control" name="casque_futur">
+                   <select class="form-control" name="casque_futur" value="{{ old('casque_futur') }}">
                     <option selected>Occulus Quest</option>
                     <option>Occulus Go</option>
                     <option>HTC Vive Pro</option>
@@ -98,7 +98,7 @@
                 <div class="form-group pt-4">
                    <h4>Question 10/20 </h4>
                    <label for="utilisation_bigscreen">Vous utilisez principalement Bigscreen pour :</label>
-                   <select class="form-control" name="utilisation_bigscreen">
+                   <select class="form-control" name="utilisation_bigscreen" value="{{ old('utilisation_bigscreen') }}">
                     <option selected>regarder des émissions TV en direct</option>
                     <option>regarder des films</option>
                     <option>jouer en solo</option>
@@ -109,23 +109,23 @@
                 <div class="form-group pt-4">
                    <h4>Question 11/20 </h4>
                    <label for="point_image">Combien donnez vous de point pour la qualité de l’image sur Bigscreen ?</label>
-                   <div class="form-check form-check-inline">
+                   <div class="form-check form-check-inline" value="{{ old('point_image') }}">
                       <input class="form-check-input" type="radio" name="point_image" value="1" checked>
                       <label class="form-check-label" >1</label>
                    </div>
-                   <div class="form-check form-check-inline">
+                   <div class="form-check form-check-inline"  value="{{ old('point_image') }}">
                       <input class="form-check-input" type="radio" name="point_image" value="2">
                       <label class="form-check-label" >2</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline"  value="{{ old('point_image') }}">
                       <input class="form-check-input" type="radio" name="point_image" value="3">
                       <label class="form-check-label" >3</label>
                    </div>
-                   <div class="form-check form-check-inline">
+                   <div class="form-check form-check-inline"  value="{{ old('point_image') }}">
                       <input class="form-check-input" type="radio" name="point_image" value="4">
                       <label class="form-check-label" >4</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline"  value="{{ old('point_image') }}">
                       <input class="form-check-input" type="radio" name="point_image" value="5">
                       <label class="form-check-label" >5</label>
                    </div>
@@ -134,23 +134,23 @@
                 <div class="form-group pt-4">
                    <h4>Question 12/20 </h4>
                    <label for="point_confort">Combien donnez vous de point pour le confort d’utilisation de l’interface Bigscreen ?</label>
-                   <div class="form-check form-check-inline">
+                   <div class="form-check form-check-inline"  value="{{ old('point_confort') }}">
                       <input class="form-check-input" type="radio" name="point_confort" value="1" checked>
                       <label class="form-check-label" for="inlineRadio1">1</label>
                    </div>
-                   <div class="form-check form-check-inline">
+                   <div class="form-check form-check-inline" value="{{ old('point_confort') }}">
                       <input class="form-check-input" type="radio" name="point_confort" value="2">
                       <label class="form-check-label" for="inlineRadio2">2</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline" value="{{ old('point_confort') }}">
                       <input class="form-check-input" type="radio" name="point_confort" value="3">
                       <label class="form-check-label" for="inlineRadio1">3</label>
                    </div>
-                   <div class="form-check form-check-inline">
+                   <div class="form-check form-check-inline" value="{{ old('point_confort') }}">
                       <input class="form-check-input" type="radio" name="point_confort" value="4">
                       <label class="form-check-label" for="inlineRadio2">4</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline" value="{{ old('point_confort') }}">
                       <input class="form-check-input" type="radio" name="point_confort" value="5">
                       <label class="form-check-label" for="inlineRadio1">5</label>
                    </div>
